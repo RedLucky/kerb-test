@@ -19,9 +19,9 @@ php artisan migrate --seed
 
 | method | function | endpoint | Bearer key
 | ----- | ------ | ------ | ------ |
-| POST | login | localhost/kerbs-test/public/api/login | No
-| GET | Check Availability | localhost/kerbs-test/public/api/check_available | YES
-| POST | Booking | localhost/kerbs-test/public/api/book | YES
-| GET | Calculate Price | localhost/kerbs-test/public/api/calculate_price | YES
-| POST | Pay | localhost/kerbs-test/public/api/payment | YES
+| POST | login | localhost/kerb-test/public/api/login | No
+| GET | Check Availability | localhost/kerb-test/public/api/check_available | YES
+| POST | Booking | localhost/kerb-test/public/api/book | YES
+| GET | Calculate Price | localhost/kerb-test/public/api/calculate_price | YES
+| POST | Pay | localhost/kerb-test/public/api/payment | YES
 
