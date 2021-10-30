@@ -17,11 +17,11 @@ php artisan migrate --seed
 ```
 ## List Endpoint
 
-| method | function | endpoint | Bearer key
-| ----- | ------ | ------ | ------ |
-| POST | login | localhost/kerb-test/public/api/login | No
-| GET | Check Availability | localhost/kerb-test/public/api/check_available | YES
-| POST | Booking | localhost/kerb-test/public/api/book | YES
-| GET | Calculate Price | localhost/kerb-test/public/api/calculate_price | YES
-| POST | Pay | localhost/kerb-test/public/api/payment | YES
+| method | function | endpoint | Bearer key | params 
+| ----- | ------ | ------ | ------ | ----- |
+| POST | login | localhost/kerb-test/public/api/login | No | username:admin, password:123456
+| GET | Check Availability | localhost/kerb-test/public/api/check_available | YES | 
+| POST | Booking | localhost/kerb-test/public/api/book | YES | customer_id : 1, bay_id : 1-3, owner_id : 1
+| GET | Calculate Price | localhost/kerb-test/public/api/calculate_price | YES | book_id
+| POST | Pay | localhost/kerb-test/public/api/payment | YES | book_id
 
