@@ -25,3 +25,5 @@ php artisan migrate --seed
 | GET | Calculate Price | localhost/kerb-test/public/api/calculate_price | YES | book_id
 | POST | Pay | localhost/kerb-test/public/api/payment | YES | book_id
 
+## Link Endpoint Documentation
+[postman](https://documenter.getpostman.com/view/2125460/UVByHVaC).
