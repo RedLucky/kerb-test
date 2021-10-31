@@ -28,6 +28,15 @@ class ApplicationController extends Controller
         if ($validate->fails()) {
             return $this->responseJson(400,$validate->errors(),[]);
         }
+
+        // before book, check if current user having another book active before
+        // this assumption 1 user only can book 1 bay at the same time
+        $checkBook = BookCustomerBay::where('customer_id',$request->customer_id)
+                    ->whereNull('end_date')->first();
+        if($checkBook){
+            return $this->responseJson(500,"you have already another book",[]);
+        }
+
         DB::beginTransaction();
         try {
             if($this->isAvailableBay($request->bay_id)){
