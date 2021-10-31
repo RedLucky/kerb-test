@@ -1,5 +1,5 @@
 # Kerb test parking
-## installation
+## installation without docker
 1. copy `.env.development` to `.env`
 2. setup the database on `.env` :
 ```
@@ -15,6 +15,15 @@ DB_PASSWORD=(YOUR_DB_PASSWORD)
 composer install
 php artisan migrate --seed 
 ```
+
+## installation with docker
+run the command in the project directory: 
+```
+docker-compose up -d
+docker compose exec kerb-app composer install
+docker compose exec kerb-app php artisan migrate --seed
+```
+
 ## List Endpoint
 
 | method | function | endpoint | Bearer key | params 
