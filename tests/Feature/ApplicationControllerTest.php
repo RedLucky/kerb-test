@@ -32,6 +32,17 @@ class ApplicationControllerTest extends TestCase
              ]);
     }
 
+    public function test_check_available_not_exist()
+    {
+        $this->json('POST', '/api/book', ['bay_id'=>1, 'customer_id'=> 1, 'owner_id'=>1]);
+        $this->json('POST', '/api/book', ['bay_id'=>2, 'customer_id'=> 2, 'owner_id'=>1]);
+        $this->json('POST', '/api/book', ['bay_id'=>3, 'customer_id'=> 3, 'owner_id'=>1]);
+        $this->json('GET', '/api/check_available')
+        ->assertJson([
+            'data' => []
+        ]);
+    }
+
     public function test_book_bay_success()
     {
         $this->json('POST', '/api/book', ['bay_id'=>1, 'customer_id'=> 1, 'owner_id'=>1])
