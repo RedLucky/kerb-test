@@ -17,12 +17,13 @@ php artisan migrate --seed
 ```
 
 ## installation with docker
-run the command in the project directory: 
+1. run the command in the project directory: 
 ```
 docker-compose up -d
 docker compose exec kerb-app composer install
 docker compose exec kerb-app php artisan migrate --seed
 ```
+2. run with endpoint `localhost/public/api`
 
 ## List Endpoint
 
